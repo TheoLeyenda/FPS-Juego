@@ -24,14 +24,17 @@ public class rayCast : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(fpsCamara.transform.position, fpsCamara.transform.forward, out hit, rango))
         {
-            if (hit.transform.gameObject.tag == "Trampa")
+            if (arma.BalasMataTrampas >= 1)
             {
-                
-                puntaje = puntaje + 100;
-                Destroy(hit.transform.gameObject);
-               
-                trampasDestruidas = trampasDestruidas + 1;
+                if (hit.transform.gameObject.tag == "Trampa")
+                {
 
+                    puntaje = puntaje + 100;
+                    Destroy(hit.transform.gameObject);
+
+                    trampasDestruidas = trampasDestruidas + 1;
+
+                }
             }
         }
 

@@ -166,7 +166,10 @@ public class generadorRandomNivel : MonoBehaviour
        // if (contador < maximoTrampas)
        // {
             timer = timer + Time.deltaTime;
-            
+            if(Jugador.transform.position.y < 0)
+            {
+                JugadorColicion.vida = 0;
+            }
             if (timer >= 10 && timer < 10 + Time.deltaTime)
             {
                 //TRAMPAS ARRIBA DEERECHA
