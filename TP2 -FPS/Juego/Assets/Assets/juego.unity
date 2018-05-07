@@ -114,6 +114,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70973807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 70973808}
+  - component: {fileID: 70973810}
+  - component: {fileID: 70973809}
+  m_Layer: 5
+  m_Name: TextVida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &70973808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70973807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 608147792}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 301.9, y: 23}
+  m_SizeDelta: {x: 600, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &70973809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70973807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &70973810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70973807}
 --- !u!1 &149233806
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +288,7 @@ MonoBehaviour:
   textarmaEnUso: {fileID: 1587878549}
   textoMunicionMatatrampas: {fileID: 1872453986}
   textoMunicionFlowerator: {fileID: 2099924653}
+  textVida: {fileID: 70973809}
 --- !u!4 &434452258
 Transform:
   m_ObjectHideFlags: 0
@@ -273,7 +348,7 @@ MonoBehaviour:
   nivel3: {fileID: 1860766115416326, guid: c2844a851259e8a4283ce542f26d0946, type: 2}
   nivel4: {fileID: 1254835877441806, guid: 66ef45a6849e63345ace2acf23315de4, type: 2}
   nivel5: {fileID: 1050271077577158, guid: fc40bcf7655a87947a3460cff8b5b578, type: 2}
-  nivel6: {fileID: 1546543409482804, guid: c598d2918f8b4e64aa94383f67ea9ae5, type: 2}
+  nivel6: {fileID: 1612856267414572, guid: 68eaad080b62d1f42b4469908d96544d, type: 2}
   nivel7: {fileID: 1178605783244328, guid: ca7b98c573a4fd746a03c8e7aa6d9a62, type: 2}
   nivel8: {fileID: 1264813698004098, guid: 58d7ced437f46c74ab30cb1ee4c7be5f, type: 2}
   Jugador: {fileID: 1750568423699642, guid: 5b1738fe65c29184ba8ddcca9895d85a, type: 2}
@@ -373,6 +448,7 @@ RectTransform:
   - {fileID: 1587878551}
   - {fileID: 1872453988}
   - {fileID: 2099924652}
+  - {fileID: 70973808}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -593,7 +669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 301.9, y: 71.2}
+  m_AnchoredPosition: {x: 703.9, y: 259}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1602319192
@@ -803,7 +879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 301.9, y: 36.3}
+  m_AnchoredPosition: {x: 703.9, y: 224.1}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2099924651
@@ -838,7 +914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 301.9, y: 36.3}
+  m_AnchoredPosition: {x: 703.9, y: 224.1}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2099924653

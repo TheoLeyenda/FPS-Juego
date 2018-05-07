@@ -76,18 +76,18 @@ public class arma : MonoBehaviour
             switch (TipoArma)
             {
                 case "Mata Trampas":
-                    if (ClipsMataTrampas >= 1)
+                    if (ClipsMataTrampas > 0)
                     {
                         BalasMataTrampas = 12;
                         ClipsMataTrampas = ClipsMataTrampas -12;
                     }
                     else
                     {
-                        ClipsMataTrampas = 96;
+                        ClipsMataTrampas = 0;
                     }
                     break;
                 case "Flowerator":
-                    if (ClipsArmaFlores >= 1)
+                    if (ClipsArmaFlores > 0)
                     {
                         BalasArmaFlores = 20;
                         ClipsArmaFlores = ClipsArmaFlores - 20;

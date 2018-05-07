@@ -8,6 +8,7 @@ public class ScriptControl : MonoBehaviour {
     // Use this for initialization
 
     private int puntaje = 0;
+    private int vida = 0;
     private int puntajeFantasma;
     private int puntajeTrampa;
     private int TrampasDestruidas = 0;
@@ -22,6 +23,7 @@ public class ScriptControl : MonoBehaviour {
     public Text textarmaEnUso;
     public Text textoMunicionMatatrampas;
     public Text textoMunicionFlowerator;
+    public Text textVida;
     private int municionTotalMataTrampas;
     private int municionEnCargadorMataTrampas;
     private int municionTotalFlowerator;
@@ -34,6 +36,8 @@ public class ScriptControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        vida = JugadorColicion.vida;
+        textVida.text = "Vida:" + vida;
         puntajeTrampa = rayCast.puntaje;
         TrampasDestruidas = rayCast.trampasDestruidas;
         TrampasCreadas = generadorRandomNivel.contador;

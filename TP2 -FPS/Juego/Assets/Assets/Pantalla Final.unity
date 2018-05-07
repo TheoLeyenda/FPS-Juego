@@ -700,6 +700,7 @@ MonoBehaviour:
   textarmaEnUso: {fileID: 717690881}
   textoMunicionMatatrampas: {fileID: 717690881}
   textoMunicionFlowerator: {fileID: 717690881}
+  textVida: {fileID: 717690881}
 --- !u!4 &1436645674
 Transform:
   m_ObjectHideFlags: 0
