@@ -8,7 +8,7 @@ public class bala : MonoBehaviour {
     public Rigidbody rigBala;
 	void Start () {
         //rigBala.AddRelativeForce(Vector3.forward * -50, ForceMode.Impulse);
-        gameObject.GetComponent<Rigidbody>().AddRelativeForce(arma._cameraLookingAt * 50, ForceMode.Impulse);
+        gameObject.GetComponent<Rigidbody>().AddRelativeForce(arma.VistaCamara * 50, ForceMode.Impulse);
     }
 	
 	// Update is called once per frame

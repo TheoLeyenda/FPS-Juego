@@ -273,7 +273,7 @@ MonoBehaviour:
   nivel6: {fileID: 1546543409482804, guid: c598d2918f8b4e64aa94383f67ea9ae5, type: 2}
   nivel7: {fileID: 1178605783244328, guid: ca7b98c573a4fd746a03c8e7aa6d9a62, type: 2}
   nivel8: {fileID: 1264813698004098, guid: 58d7ced437f46c74ab30cb1ee4c7be5f, type: 2}
-  Jugador: {fileID: 1951624664417292, guid: 5b1738fe65c29184ba8ddcca9895d85a, type: 2}
+  Jugador: {fileID: 1750568423699642, guid: 5b1738fe65c29184ba8ddcca9895d85a, type: 2}
   trampa1: {fileID: 1866342408844392, guid: 3f3ed01849ab7634a901953963d790d3, type: 2}
   trampa2: {fileID: 1576633355092652, guid: d9a331f147e43824a971c44187bf375d, type: 2}
   trampa3: {fileID: 1469815678682130, guid: ae75718402d1b0b4685d1d4ea8cc63ea, type: 2}
