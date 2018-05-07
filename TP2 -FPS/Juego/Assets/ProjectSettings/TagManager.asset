@@ -6,11 +6,14 @@ TagManager:
   tags:
   - Trampa
   - PINCHOS TRASERA
-  - PICHOS DERECHA
   - PINCHOS IZQUIERDA
   - PINCHOS DELANTERA
   - PINCHOS DERECHA
   - bala
+  - pared1
+  - pared2
+  - pared3
+  - pared4
   layers:
   - Default
   - TransparentFX
