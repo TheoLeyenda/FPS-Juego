@@ -7,11 +7,11 @@ public class arma : MonoBehaviour
 
     public GameObject bala;
     public GameObject armaEnUso;
-    private string TipoArma;
-    private int BalasMataTrampas;
-    private int ClipsMataTrampas;
-    private int BalasArmaFlores;
-    private int ClipsArmaFlores;
+    public static string TipoArma;
+    public static int BalasMataTrampas;
+    public static int ClipsMataTrampas;
+    public static int BalasArmaFlores;
+    public static int ClipsArmaFlores;
     public Camera camara;
     public static Vector3 VistaCamara;
 
@@ -20,10 +20,10 @@ public class arma : MonoBehaviour
     {
        
         TipoArma = "Mata Trampas";
-        ClipsMataTrampas = 8;
-        BalasMataTrampas = 7;
-        BalasArmaFlores = 24;
-        ClipsArmaFlores = 16;
+        ClipsMataTrampas = 96;
+        BalasMataTrampas = 12;
+        BalasArmaFlores = 20;
+        ClipsArmaFlores = 120;
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class arma : MonoBehaviour
         Reload();
         ChangeWeapon();
     }
-
+    //DISPARA EL ARMA QUE ESTEMOS USANDO
     void Shoot()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -46,15 +46,13 @@ public class arma : MonoBehaviour
                     if (BalasMataTrampas >= 1)
                     {
                         BalasMataTrampas--;
-                        if (Physics.Raycast(camara.transform.position, camara.transform.forward, out hit, 5)
-                        &&
-                        hit.transform.gameObject.CompareTag("Trampa"))
+                        if (Physics.Raycast(camara.transform.position, camara.transform.forward, out hit, 5) && hit.transform.gameObject.CompareTag("Trampa"))
                         {
                             Destroy(hit.transform.gameObject);
                         }
                     }
                     break;
-                case "Mata Fantasmas":
+                case "Flowerator":
                     if (BalasArmaFlores >= 1)
                     {
                         bala = Instantiate(bala, gameObject.transform.position + camara.transform.forward, Quaternion.identity);
@@ -67,7 +65,10 @@ public class arma : MonoBehaviour
                     break;
             }
         }
-    }//DISPARA EL ARMA QUE ESTEMOS USANDO
+    }
+    //----------------------------------------
+
+    //RECARGA EL ARMA QUE ESTEMOS USANDO
     void Reload()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -77,22 +78,34 @@ public class arma : MonoBehaviour
                 case "Mata Trampas":
                     if (ClipsMataTrampas >= 1)
                     {
-                        BalasMataTrampas = 7;
-                        ClipsMataTrampas--;
+                        BalasMataTrampas = 12;
+                        ClipsMataTrampas = ClipsMataTrampas -12;
+                    }
+                    else
+                    {
+                        ClipsMataTrampas = 96;
                     }
                     break;
-                case "Mata Fantasmas":
+                case "Flowerator":
                     if (ClipsArmaFlores >= 1)
                     {
-                        BalasArmaFlores = 24;
-                        ClipsArmaFlores--;
+                        BalasArmaFlores = 20;
+                        ClipsArmaFlores = ClipsArmaFlores - 20;
+                    }
+                    else
+                    {
+                        ClipsArmaFlores = 120;
+                        
                     }
                     break;
                 default:
                     break;
             }
         }
-    }//RECARGA EL ARMA QUE ESTEMOS USANDO
+    }
+    //----------------------------------------
+
+     //CAMBIA EL ARMA
     void ChangeWeapon()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -101,7 +114,8 @@ public class arma : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            TipoArma = "Mata Fantasmas";
+            TipoArma = "Flowerator";
         }
     }
+    //-----------------------------------
 }

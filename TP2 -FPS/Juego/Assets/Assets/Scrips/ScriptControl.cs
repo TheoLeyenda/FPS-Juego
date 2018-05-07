@@ -19,7 +19,15 @@ public class ScriptControl : MonoBehaviour {
     public Text textTrampasCreadas;
     public Text textFantasmasCreados;
     public Text textFantasmasEliminados;
-	void Start () {
+    public Text textarmaEnUso;
+    public Text textoMunicionMatatrampas;
+    public Text textoMunicionFlowerator;
+    private int municionTotalMataTrampas;
+    private int municionEnCargadorMataTrampas;
+    private int municionTotalFlowerator;
+    private int municionEnCargadorFlowerator;
+
+    void Start () {
 		
 	}
 
@@ -35,7 +43,26 @@ public class ScriptControl : MonoBehaviour {
         Debug.Log("Fantasmas Eliminados: " + FantasmasEliminados);
         puntajeFantasma = Fantasma.puntosPorFantasma;
         puntaje = puntajeFantasma + puntajeTrampa;
-        Debug.Log("Puntaje: " + puntaje);
+        textPuntaje.text = "Puntaje: " + puntaje;
+        if (arma.TipoArma == "Flowerator")
+        {
+            textarmaEnUso.text = "Flowerator";
+            textoMunicionFlowerator.gameObject.SetActive(true);
+            textoMunicionMatatrampas.gameObject.SetActive(false);
+            municionTotalFlowerator = arma.BalasArmaFlores;
+            municionEnCargadorFlowerator = arma.ClipsArmaFlores;
+            textoMunicionFlowerator.text = "" + municionTotalFlowerator + "/" + municionEnCargadorFlowerator;
+        }
+        if(arma.TipoArma == "Mata Trampas")
+        {
+            textarmaEnUso.text = "Mata Trampas";
+            textoMunicionMatatrampas.gameObject.SetActive(true);
+            textoMunicionFlowerator.gameObject.SetActive(false);
+            municionTotalMataTrampas = arma.BalasMataTrampas;
+            municionEnCargadorMataTrampas = arma.ClipsMataTrampas;
+            textoMunicionMatatrampas.text = ""+municionTotalMataTrampas+ "/" + municionEnCargadorMataTrampas;
+        }
+        
         if (JugadorColicion.gameOver == true)
         {
             Debug.Log(JugadorColicion.gameOver);
