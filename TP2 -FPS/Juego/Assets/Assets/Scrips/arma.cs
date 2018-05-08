@@ -111,10 +111,12 @@ public class arma : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             TipoArma = "Mata Trampas";
+            rayCast.enMatatrampas = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             TipoArma = "Flowerator";
+            rayCast.enMatatrampas = false;
         }
     }
     //-----------------------------------

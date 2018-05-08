@@ -10,6 +10,7 @@ public class rayCast : MonoBehaviour {
     public static int puntaje = 0;
     public static int trampasDestruidas = 0;
     private bool entrar = true;
+    public static bool enMatatrampas = true;
     // Use this for initializatio
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class rayCast : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(fpsCamara.transform.position, fpsCamara.transform.forward, out hit, rango))
         {
-            if (arma.BalasMataTrampas >= 1)
+            if (arma.BalasMataTrampas >= 1 && enMatatrampas)
             {
                 if (hit.transform.gameObject.tag == "Trampa")
                 {
